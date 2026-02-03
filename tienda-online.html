@@ -233,12 +233,14 @@
 
     <!-- Products & Cart Start -->
     <section class="page-projects">
+    <section class="our-services page-service">
         <div class="container">
             <div class="row align-items-center mb-4">
                 <div class="col-lg-7">
                     <div class="section-title">
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Selección destacada para compra inmediata</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">Elige productos del catálogo, agrega al carrito y finaliza tu pago seguro en línea con Stripe.</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Agrega artículos al carrito, ajusta cantidades y completa tu pago en línea con Stripe.</p>
                     </div>
                 </div>
                 <div class="col-lg-5 text-lg-end">
@@ -305,6 +307,13 @@
                                     <div class="d-flex align-items-center justify-content-between">
                                         <strong>$2,980 MXN</strong>
                                         <button class="btn-default" data-product="Espejo medio domo" data-price="2980">Agregar</button>
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="service-content">
+                                    <h3>Espejo convexo 60 cm</h3>
+                                    <p>Visibilidad amplia para almacenes y cruces viales internos.</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <strong>$1,890 MXN</strong>
+                                        <button class="btn-default" data-product="Espejo convexo 60 cm" data-price="1890">Agregar</button>
                                     </div>
                                 </div>
                             </div>
@@ -325,6 +334,13 @@
                                     <div class="d-flex align-items-center justify-content-between">
                                         <strong>$3,450 MXN</strong>
                                         <button class="btn-default" data-product="Espejo domo completo" data-price="3450">Agregar</button>
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="service-content">
+                                    <h3>Espejo domo 90 cm</h3>
+                                    <p>Monitoreo 360° para tiendas y centros logísticos.</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <strong>$3,450 MXN</strong>
+                                        <button class="btn-default" data-product="Espejo domo 90 cm" data-price="3450">Agregar</button>
                                     </div>
                                 </div>
                             </div>
@@ -342,6 +358,10 @@
                                 <div class="project-content">
                                     <h3>Cono vial reflejante</h3>
                                     <p>Alta visibilidad para operaciones nocturnas o emergencias.</p>
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="service-content">
+                                    <h3>Cono vial reflejante</h3>
+                                    <p>Alta visibilidad para operaciones nocturnas o de emergencia.</p>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <strong>$320 MXN</strong>
                                         <button class="btn-default" data-product="Cono vial reflejante" data-price="320">Agregar</button>
@@ -365,6 +385,13 @@
                                     <div class="d-flex align-items-center justify-content-between">
                                         <strong>$1,150 MXN</strong>
                                         <button class="btn-default" data-product="Trafitambo vial" data-price="1150">Agregar</button>
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="service-content">
+                                    <h3>Kit de señalización completo</h3>
+                                    <p>Paquete listo para obras con conos, barreras y reflectantes.</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <strong>$5,990 MXN</strong>
+                                        <button class="btn-default" data-product="Kit de señalización completo" data-price="5990">Agregar</button>
                                     </div>
                                 </div>
                             </div>
@@ -386,6 +413,7 @@
                             </div>
                             <button class="btn-default w-100 mb-2" id="checkout-button">Pagar con Stripe</button>
                             <p class="small text-muted">El pago seguro se procesa mediante Stripe Checkout desde nuestro backend.</p>
+                            <p class="small text-muted">El pago seguro se procesa mediante Stripe. Se requiere un backend para crear la sesión de pago.</p>
                             <div id="checkout-feedback" class="small text-danger"></div>
                         </div>
                     </div>
@@ -597,6 +625,7 @@
 
             try {
                 const response = await fetch('create-checkout-session.php', {
+                const response = await fetch('/create-checkout-session', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ items: cart })
