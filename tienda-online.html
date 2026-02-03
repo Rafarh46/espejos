@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="Tienda en línea de productos de seguridad y señalización.">
-    <meta name="keywords" content="espejos convexos, señalización, seguridad vial, tienda">
+    <meta name="description" content="Tienda en línea con carrito y pagos integrados para productos de seguridad vial.">
+    <meta name="keywords" content="tienda en línea, carrito, pagos en línea, stripe, seguridad vial">
     <meta name="author" content="Ingeniera Industrial Espejos MX">
     <!-- Page Title -->
-    <title>Tienda | Ingeniera Industrial Espejos MX</title>
+    <title>Tienda en Línea | Ingeniera Industrial Espejos MX</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Google Fonts Css-->
@@ -157,7 +157,8 @@
                                                 Rafia</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link active" href="ecommerce.html">Tienda</a></li>
+                                <li class="nav-item"><a class="nav-link" href="ecommerce.html">Tienda</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="tienda-online.html">Tienda en línea</a></li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
                             </ul>
                         </div>
@@ -210,317 +211,188 @@
     <!-- Header End -->
 
     <!-- Page Header Start -->
-    <div class="page-header parallaxie">
+    <div class="page-header">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
                 <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">Tienda <span>en línea</span></h1>
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Tienda en línea</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">tienda</li>
+                                <li class="breadcrumb-item"><a href="./">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Tienda en línea</li>
                             </ol>
                         </nav>
+                        <p class="text-anime-style-3 mt-3" data-cursor="-opaque">Compra productos destacados, administra tu carrito y paga en línea con Stripe.</p>
                     </div>
-                    <!-- Page Header Box End -->
                 </div>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
-    <!-- Online Store CTA Start -->
-    <div class="our-services page-service">
+    <!-- Products & Cart Start -->
+    <section class="our-services page-service">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Selección destacada para compra inmediata</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Agrega artículos al carrito, ajusta cantidades y completa tu pago en línea con Stripe.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <div class="btn-default btn-default-light" id="cart-status">Carrito: <span id="cart-count">0</span> artículos</div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="row g-4" id="product-grid">
+                        <div class="col-md-6">
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="service-content">
+                                    <h3>Espejo convexo 60 cm</h3>
+                                    <p>Visibilidad amplia para almacenes y cruces viales internos.</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <strong>$1,890 MXN</strong>
+                                        <button class="btn-default" data-product="Espejo convexo 60 cm" data-price="1890">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="service-content">
+                                    <h3>Espejo domo 90 cm</h3>
+                                    <p>Monitoreo 360° para tiendas y centros logísticos.</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <strong>$3,450 MXN</strong>
+                                        <button class="btn-default" data-product="Espejo domo 90 cm" data-price="3450">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="service-content">
+                                    <h3>Cono vial reflejante</h3>
+                                    <p>Alta visibilidad para operaciones nocturnas o de emergencia.</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <strong>$320 MXN</strong>
+                                        <button class="btn-default" data-product="Cono vial reflejante" data-price="320">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="service-content">
+                                    <h3>Kit de señalización completo</h3>
+                                    <p>Paquete listo para obras con conos, barreras y reflectantes.</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <strong>$5,990 MXN</strong>
+                                        <button class="btn-default" data-product="Kit de señalización completo" data-price="5990">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-content">
+                            <h3>Carrito en línea</h3>
+                            <p class="mb-3">Revisa los productos seleccionados antes de pagar.</p>
+                            <div id="cart-items" class="mb-3">
+                                <p class="text-muted">Aún no hay productos en el carrito.</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <strong>Total</strong>
+                                <strong id="cart-total">$0 MXN</strong>
+                            </div>
+                            <button class="btn-default w-100 mb-2" id="checkout-button">Pagar con Stripe</button>
+                            <p class="small text-muted">El pago seguro se procesa mediante Stripe. Se requiere un backend para crear la sesión de pago.</p>
+                            <div id="checkout-feedback" class="small text-danger"></div>
+                        </div>
+                    </div>
+
+                    <div class="service-item wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-content">
+                            <h3>Pago en línea</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Integración con Stripe Checkout</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Pagos con tarjeta y wallets digitales</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Recibos automáticos por correo</li>
+                            </ul>
+                            <a class="btn-default btn-default-light w-100" href="https://stripe.com/mx" target="_blank" rel="noopener">Conoce Stripe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products & Cart End -->
+
+    <!-- Payment Steps Start -->
+    <section class="our-service-steps">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <div class="section-title">
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Nueva tienda en línea con pagos integrados</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Conoce la nueva experiencia de compra con carrito en línea y pagos seguros mediante Stripe.</p>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Cómo funciona la compra en línea</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">La experiencia de pago es ágil y segura, ideal para pedidos urgentes.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="tienda-online.html" class="btn-default">Ver tienda en línea</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Online Store CTA End -->
-
-    <!-- Our Work Section Start -->
-    <div class="page-projects">
-        <div class="container">
-            <div class="row align-items-center" style="margin-bottom: 40px;">
-                <div class="col-lg-8">
-                    <div class="section-title">
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Explora nuestro catálogo completo</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Selecciona el producto ideal para tu operación. Cada ficha te lleva a sus detalles técnicos, aplicaciones y cotización.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="wow fadeInUp" data-wow-delay="0.4s" style="text-align: right;">
-                        <a href="contact.html" class="btn-default">Solicitar cotización</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row project-item-boxes align-items-center">
-                <div class="col-lg-4 col-md-6 project-item-box seguridad">
-                    <div class="project-item wow fadeInUp">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/espejo convexo vidrio.png" alt="Espejo convexo de vidrio">
-                            </figure>
+                <div class="col-lg-6">
+                    <div class="service-steps-content">
+                        <div class="service-step wow fadeInUp" data-wow-delay="0.2s">
+                            <h3>1. Selecciona productos</h3>
+                            <p>Agrega artículos al carrito y ajusta cantidades fácilmente.</p>
                         </div>
-                        <div class="project-tag">
-                            <span>Espejos de seguridad</span>
+                        <div class="service-step wow fadeInUp" data-wow-delay="0.3s">
+                            <h3>2. Confirma tu pedido</h3>
+                            <p>Verifica el total antes de continuar con el pago seguro.</p>
                         </div>
-                        <div class="project-content">
-                            <h3><a href="espejo-convexo-vidrio.html">Espejo convexo de vidrio</a></h3>
-                            <p>Claridad superior para interiores y exteriores.</p>
-                            <a href="espejo-convexo-vidrio.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box seguridad">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/espejo convexo policarbonato.png" alt="Espejo convexo de policarbonato">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Espejos de seguridad</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="espejo-convexo-policarbonato.html">Espejo convexo de policarbonato</a></h3>
-                            <p>Resistencia al impacto para zonas de alto tráfico.</p>
-                            <a href="espejo-convexo-policarbonato.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box seguridad">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/espejo cpnvexo acrilico.png" alt="Espejo convexo de acrílico">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Espejos de seguridad</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="espejo-convexo-acrilico.html">Espejo convexo de acrílico</a></h3>
-                            <p>Ligero, práctico y con visibilidad amplia.</p>
-                            <a href="espejo-convexo-acrilico.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box seguridad">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/medio_domo.jpg" alt="Espejo medio domo">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Espejos panorámicos</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="espejo-medio-domo.html">Espejo medio domo</a></h3>
-                            <p>Control visual para pasillos, tiendas y almacenes.</p>
-                            <a href="espejo-medio-domo.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box seguridad">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/domo-completo.jpg" alt="Espejo domo completo">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Espejos panorámicos</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="espejo-domo-completo.html">Espejo domo completo</a></h3>
-                            <p>Cobertura 360° para cruces y áreas amplias.</p>
-                            <a href="espejo-domo-completo.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box vial">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/Cono.jpg" alt="Trafitambo vial naranja">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Señalización vial</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="trafitambos.html">Trafitambos viales naranja</a></h3>
-                            <p>Alta visibilidad para desvíos, obras y eventos.</p>
-                            <a href="trafitambos.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box vial">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/baston de inspeccion vehiuclar.png" alt="Bastón de inspección vehicular">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Seguridad industrial</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="barrera-naranja.html">Bastón de inspección vehicular</a></h3>
-                            <p>Control de acceso y revisión rápida en entrada.</p>
-                            <a href="barrera-naranja.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box montacargas">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/Espejo Domo Completo trafico montacragas.png" alt="Espejo domo completo para tráfico de montacargas">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Montacargas</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="conos-viales.html">Domo completo para montacargas</a></h3>
-                            <p>Visibilidad total en pasillos y cruces internos.</p>
-                            <a href="conos-viales.html" class="btn-default btn-highlight">Ver detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 project-item-box almacenamiento">
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="project-image">
-                            <figure class="image-anime">
-                                <img src="images/costal de rafia.png" alt="Costales de rafia">
-                            </figure>
-                        </div>
-                        <div class="project-tag">
-                            <span>Empaque y logística</span>
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="costales-rafia.html">Costales y sacos de rafia</a></h3>
-                            <p>Soluciones resistentes para transporte y almacenaje.</p>
-                            <a href="costales-rafia.html" class="btn-default btn-highlight">Ver detalles</a>
+                        <div class="service-step wow fadeInUp" data-wow-delay="0.4s">
+                            <h3>3. Paga con Stripe</h3>
+                            <p>Conecta con Stripe Checkout para finalizar en minutos.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Our Work Section End -->
+    </section>
+    <!-- Payment Steps End -->
 
     <!-- Footer Start -->
     <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <!-- Footer Header Start -->
-                    <div class="footer-header">
-                        <!-- Section Title Start -->
-                        <div class="section-title dark-section">
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Tenemos el espejo que necesitas
-                            </h2>
-                            <p>Para uso en la Industrial, Almacenes, Hospitales, Tiendas, Talleres, y cualquier
-                                lugar
-                                donde usted requiera ver puntos ciegos.
-                            </p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Footer Contact Circle Start -->
-                        <div class="footer-contact-circle">
-                            <img src="images/contact-now-circle.svg" alt="">
-                        </div>
-                        <!-- Footer Contact Circle End -->
+                <div class="col-lg-4">
+                    <div class="footer-logo">
+                        <img src="images/LogoIng.svg" alt="Logo">
                     </div>
-                    <!-- Footer Header End -->
+                    <p>Ingeniera Industrial Espejos MX, especialistas en seguridad vial y señalización.</p>
                 </div>
-
-                <div class="col-lg-3 col-md-12">
-                    <!-- About Footer Start -->
-                    <div class="about-footer">
-                        <!-- Footer Logo Start -->
-                        <div class="footer-logo">
-                            <img src="images/LogoIngOscuro.svg" alt="">
-                        </div>
-                        <!-- Footer Logo End -->
-
-                        <!-- Footer Social Link Start -->
-                        <div class="footer-social-links">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- Footer Social Link End -->
-                    </div>
-                    <!-- About Footer End -->
+                <div class="col-lg-4">
+                    <h3>Contacto</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-phone"></i> 55 1106 4233</li>
+                        <li><i class="fa-solid fa-envelope"></i> ventas@espejos.mx</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Ciudad de México</li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4 col-md-4 col-6">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3>Enlaces</h3>
-                        <ul class="footer-links-horizontal">
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="https://www.mercadolibre.com.mx/perfil/INGENIERIA+INDUSTRIAL+ESPEJOS">Mercado Libre</a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3>Contacto</h3>
-                        <ul>
-                            <li>55 11 06 42 33 / 55 5361 0993</li>
-                            <li>ventas@espejos.com.mx</li>
-                            <li>Roberto Fulton No.1 Colonia La Loma Tlalnepantla Estado de Mexico C.P. 54060</li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
+                <div class="col-lg-4">
+                    <h3>Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="ecommerce.html">Tienda actual</a></li>
+                        <li><a href="tienda-online.html">Tienda en línea</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Footer Copyright Section Start -->
-            <div class="footer-copyright">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <!-- Footer Copyright Start -->
-                        <div class="footer-copyright-text">
-                            <p>Copyright © 2024 All Rights Reserved.</p>
-                        </div>
-                        <!-- Footer Copyright End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Copyright Section End -->
         </div>
     </footer>
     <!-- Footer End -->
@@ -540,7 +412,7 @@
     <script src="js/jquery.counterup.min.js"></script>
     <!-- Isotop js file -->
     <script src="js/isotope.min.js"></script>
-    <!-- Magnific js file -->
+    <!-- Magnific Popup js file -->
     <script src="js/jquery.magnific-popup.min.js"></script>
     <!-- SmoothScroll -->
     <script src="js/SmoothScroll.js"></script>
@@ -549,15 +421,129 @@
     <!-- MagicCursor js file -->
     <script src="js/gsap.min.js"></script>
     <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
-    <script src="js/SplitText.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <!-- Wow js file -->
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const cartKey = 'espejos_cart';
+        const cartItemsEl = document.getElementById('cart-items');
+        const cartTotalEl = document.getElementById('cart-total');
+        const cartCountEl = document.getElementById('cart-count');
+        const checkoutButton = document.getElementById('checkout-button');
+        const checkoutFeedback = document.getElementById('checkout-feedback');
+
+        const formatCurrency = (value) => `$${value.toLocaleString('es-MX')} MXN`;
+
+        const getCart = () => JSON.parse(localStorage.getItem(cartKey)) || [];
+
+        const saveCart = (cart) => localStorage.setItem(cartKey, JSON.stringify(cart));
+
+        const updateCartUI = () => {
+            const cart = getCart();
+            cartItemsEl.innerHTML = '';
+            let total = 0;
+            let count = 0;
+
+            if (cart.length === 0) {
+                cartItemsEl.innerHTML = '<p class="text-muted">Aún no hay productos en el carrito.</p>';
+            } else {
+                cart.forEach((item, index) => {
+                    total += item.price * item.quantity;
+                    count += item.quantity;
+                    const itemRow = document.createElement('div');
+                    itemRow.className = 'd-flex align-items-center justify-content-between mb-2';
+                    itemRow.innerHTML = `
+                        <div>
+                            <strong>${item.name}</strong><br>
+                            <small>${formatCurrency(item.price)} x ${item.quantity}</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-light" data-action="decrease" data-index="${index}">-</button>
+                            <button class="btn btn-sm btn-light" data-action="increase" data-index="${index}">+</button>
+                            <button class="btn btn-sm btn-outline-danger" data-action="remove" data-index="${index}"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    `;
+                    cartItemsEl.appendChild(itemRow);
+                });
+            }
+
+            cartTotalEl.textContent = formatCurrency(total);
+            cartCountEl.textContent = count;
+        };
+
+        const addToCart = (name, price) => {
+            const cart = getCart();
+            const existing = cart.find((item) => item.name === name);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            saveCart(cart);
+            updateCartUI();
+        };
+
+        document.querySelectorAll('[data-product]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const name = button.dataset.product;
+                const price = parseFloat(button.dataset.price);
+                addToCart(name, price);
+            });
+        });
+
+        cartItemsEl.addEventListener('click', (event) => {
+            const action = event.target.closest('button')?.dataset.action;
+            const index = parseInt(event.target.closest('button')?.dataset.index, 10);
+            if (Number.isNaN(index)) return;
+
+            const cart = getCart();
+            if (!cart[index]) return;
+
+            if (action === 'increase') {
+                cart[index].quantity += 1;
+            }
+            if (action === 'decrease') {
+                cart[index].quantity = Math.max(1, cart[index].quantity - 1);
+            }
+            if (action === 'remove') {
+                cart.splice(index, 1);
+            }
+
+            saveCart(cart);
+            updateCartUI();
+        });
+
+        checkoutButton.addEventListener('click', async () => {
+            checkoutFeedback.textContent = '';
+            const cart = getCart();
+            if (cart.length === 0) {
+                checkoutFeedback.textContent = 'Agrega productos al carrito antes de pagar.';
+                return;
+            }
+
+            try {
+                const response = await fetch('/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ items: cart })
+                });
+
+                if (!response.ok) {
+                    throw new Error('No se pudo crear la sesión de pago.');
+                }
+
+                const data = await response.json();
+                const stripe = Stripe(data.publishableKey || 'pk_test_REEMPLAZA_ESTE_VALOR');
+                await stripe.redirectToCheckout({ sessionId: data.sessionId });
+            } catch (error) {
+                checkoutFeedback.textContent = 'Configura tu backend Stripe para habilitar el pago en línea.';
+            }
+        });
+
+        updateCartUI();
+    </script>
 </body>
 
 </html>
